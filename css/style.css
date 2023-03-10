@@ -1,4 +1,4 @@
-body {background-color: aqua;}
+body {background-color: aqua;padding: auto;}
 p{
     margin-top: 20px;   
     margin-right: 20px;
@@ -6,3 +6,6 @@ p{
   }
   button{ margin-right: 20px;
     margin-left: 20px;}
+  
+
+    

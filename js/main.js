@@ -2,8 +2,6 @@ const MALE_NAMES= ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
 const FEMALE_NAMES= ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 let userAkanName= null;
 let gender=null;
-//let indexOfDay=null;
-
 
 
 function getUserData() {
@@ -18,29 +16,49 @@ return indexOfDay;
 
 }
 
-
-function getUserAkanName(){
-    let indexOfDay= getUserData()
-    //let gender= getUserData();
-    if (gender == "m")
-    {
-        userAkanName= MALE_NAMES[indexOfDay];
-    } 
-    else if (gender== "f")
-    {
-        userAkanName= FEMALE_NAMES[indexOfDay];
-    } else 
-    {
-        console.log("Your Gender is unknown")
-    }
- 
+function checkvalidmonth(month){
+    if ((month>=1) || (month>=12))
+    return false;
+    else 
+    return true;
 }
 
+function checkvaliddate(date){
+    if ((date>=1) || (date<=31))
+    return false;
+    else
+    return true;
+}
+
+function getUserAkanName(){
+let indexOfDay= getUserData();
+
+            if (gender == "m" )
+            {
+                userAkanName= MALE_NAMES[indexOfDay];
+                document.getElementById("output").innerHTML = "your Akan Name is : " + userAkanName; 
+                           
+            } 
+            else if (gender== "f" )
+            {
+                userAkanName= FEMALE_NAMES[indexOfDay];
+                document.getElementById("output").innerHTML = "your Akan Name is : " + userAkanName;  
+               
+            } 
+   
+            else 
+            {
+            // console.log("Your Gender is unknown")
+            alert ("your data is invalid: confirm the date, the month or gender.");
+            //document.getElementById("output1").innerHTML = "your data is invalid: confirm the date, the month or gender.";  
+            }
+        
+}
 function main()
 {
 //getUserData()
 //let indexOfDay= getUserData();
 getUserAkanName();
-   console.log(userAkanName);  
-   document.getElementById("output").innerHTML = "your Akan Name is : " + userAkanName;  
+       //document.getElementById("output").innerHTML = "your Akan Name is : " + userAkanName;  
 }
+
