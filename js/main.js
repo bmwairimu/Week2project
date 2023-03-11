@@ -2,6 +2,8 @@ const MALE_NAMES= ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
 const FEMALE_NAMES= ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 let userAkanName= null;
 let gender=null;
+//let validDate= null;
+//let validMonth= null;
 
 
 function getUserData() {
@@ -15,23 +17,35 @@ let indexOfDay=Math.floor(( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(
 return indexOfDay;
 
 }
-
-function checkvalidmonth(month){
-    if ((month>=1) || (month>=12))
-    return false;
+/*
+function checkValidMonth(){
+    
+    if (month<1 || month>12)
+   { validMonth=true;
+return validDate;}
     else 
-    return true;
+    {validMonth= false;
+    return validMonth;}
 }
 
-function checkvaliddate(date){
-    if ((date>=1) || (date<=31))
-    return false;
+function checkValidDate(date){
+    
+    if (date<1 || date>31)
+    {validDate= false;
+    return validDate
+    }
     else
-    return true;
+   { validDate= true;
+    return validDate
 }
+}*/
+
 
 function getUserAkanName(){
 let indexOfDay= getUserData();
+//let validDate= checkValidDate();
+//let validMonth= checkValidMonth();
+
 
             if (gender == "m" )
             {
@@ -45,7 +59,7 @@ let indexOfDay= getUserData();
                 document.getElementById("output").innerHTML = "your Akan Name is : " + userAkanName;  
                
             } 
-   
+        
             else 
             {
             // console.log("Your Gender is unknown")
@@ -54,11 +68,14 @@ let indexOfDay= getUserData();
             }
         
 }
+
 function main()
 {
+    
 //getUserData()
 //let indexOfDay= getUserData();
 getUserAkanName();
-       //document.getElementById("output").innerHTML = "your Akan Name is : " + userAkanName;  
-}
+}  
+//document.getElementById("output").innerHTML = "your Akan Name is : " + userAkanName;  
+
 
