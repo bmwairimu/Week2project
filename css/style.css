@@ -1,11 +1,20 @@
-body {background-color: aqua;padding: auto;}
-p{
-    margin-top: 20px;   
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  button{ margin-right: 20px;
-    margin-left: 20px;}
+body {background-color:green;padding: auto;}
+table{padding-left: 20px;
+padding-right: 20px;}
+h2{ font-style: italic;
+}
+ 
   
-
-    
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  p, h2,hr, table, button {  
+    width: 60%;
+    border-spacing: 30px;
+    margin: 0 auto;
+    }
+    button {
+     margin-left: 320px;
+    }
+   
