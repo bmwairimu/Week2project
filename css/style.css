@@ -9,12 +9,15 @@ h2{ font-style: italic;
       border: 1px solid black;
       border-collapse: collapse;
     }
-  p, h2,hr, table, button {  
+  p, h2, hr, table{  
     width: 60%;
     border-spacing: 30px;
     margin: 0 auto;
     }
     button {
-     margin-left: 320px;
-    }
+      align-content: center;
+      margin-left: 320px;
+      display: flex;
+      width: 60%;
+     }
    
